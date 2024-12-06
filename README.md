@@ -8,7 +8,9 @@ This document describes the training session 'GitHub Copilot for QA Professional
 
 This 2-hour session will provide attendees with an overview of GitHub Copilot, a new AI pair assistant that helps you write documentation faster and with less effort. It will also show how they can take advantage of code generation requiring little or no programming expertise.
 
-The session will be conducted by Andrew Scoppa, andrew.scoppa@atmosera.com. His GitHub handle is andrew-scoppa.
+The session will be conducted by Andrew Scoppa.
+- email: andrew.scoppa@atmosera.com.
+- GH handle: andrew-scoppa.
 
 ## Agenda
 
