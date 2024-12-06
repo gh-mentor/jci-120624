@@ -21,8 +21,7 @@ test('Department can add employees', () => {
     const developer = new Developer(1, 'John Smith', 60000, 'JavaScript');
     department.addEmployee(developer);
     expect(department.getDetails()).toBe('Department ID: 1, Name: Engineering, Employees: 1');
-} );
-
+});
 
 /*
 Test case 3:
@@ -79,6 +78,7 @@ test('Department getEmployees method works', () => {
     department.addEmployee(developer2);
     expect(department.getEmployees()).toEqual([developer1, developer2]);
 });
+
 /*
 Test case 8:
 Create a Department object with the ID 1 and the name 'Engineering'. Add a Developer object to the department and verify that the getDetails method returns the correct string
@@ -107,44 +107,7 @@ test('Department getDetails method works with multiple employees', () => {
 Test case 10:
 Create a Department object with the ID 1 and the name 'Engineering'. Add and remove multiple Developer objects to the department and verify that the getDetails method returns the correct string
 */
-test('Department getDetails method works after adding and removing employees', () => {
-    const department = new Department(1, 'Engineering');
-    const developer1 = new Developer(1, 'John Smith', 60000, 'JavaScript');
-    const developer2 = new Developer(2, 'Jane Doe', 65000, 'Python');
-    department.addEmployee(developer1);
-    department.addEmployee(developer2);
-    department.removeEmployee(developer1);
-    expect(department.getDetails()).toBe('Department ID: 1, Name: Engineering, Employees: 1');
-});
-/*
-Test case 8:
-Create a Department object with the ID 1 and the name 'Engineering'. Add a Developer object to the department and verify that the getDetails method returns the correct string
-*/
-test('Department getDetails method works', () => {
-    const department = new Department(1, 'Engineering');
-    const developer = new Developer(1, 'John Smith', 60000, 'JavaScript');
-    department.addEmployee(developer);
-    expect(department.getDetails()).toBe('Department ID: 1, Name: Engineering, Employees: 1');
-});
-
-/*
-Test case 9:
-Create a Department object with the ID 1 and the name 'Engineering'. Add multiple Developer objects to the department and verify that the getDetails method returns the correct string
-*/
-test('Department getDetails method works with multiple employees', () => {
-    const department = new Department(1, 'Engineering');
-    const developer1 = new Developer(1, 'John Smith', 60000, 'JavaScript');
-    const developer2 = new Developer(2, 'Jane Doe', 65000, 'Python');
-    department.addEmployee(developer1);
-    department.addEmployee(developer2);
-    expect(department.getDetails()).toBe('Department ID: 1, Name: Engineering, Employees: 2');
-});
-
-/*
-Test case 10:
-Create a Department object with the ID 1 and the name 'Engineering'. Add and remove multiple Developer objects to the department and verify that the getDetails method returns the correct string
-*/
-test('Department getDetails method works after adding and removing employees', () => {
+test('Department getDetails method works with multiple employees added and removed', () => {
     const department = new Department(1, 'Engineering');
     const developer1 = new Developer(1, 'John Smith', 60000, 'JavaScript');
     const developer2 = new Developer(2, 'Jane Doe', 65000, 'Python');

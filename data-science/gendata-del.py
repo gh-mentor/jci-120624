@@ -3,9 +3,9 @@ This app uses Python, numpy, and pandas to generate a set of data points and plo
 """
 
 # Import the required libraries
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np                  # This package is used to generate random numbers
+import pandas as pd                 # This package is used to create and manipulate data frames  
+import matplotlib.pyplot as plt     # This package is used to create plots and graphs
 
 """
 Create a function 'gendata' that generates a set of 'n' data points (x, f(x)) and returns them as a pandas data frame.
@@ -22,6 +22,18 @@ Details:
 """
 
 def gendata(x_range, n=100, f=lambda x: x ** 1.5 + np.random.normal(0, 100)):
+    """
+    Generate a DataFrame with random data based on a given function.
+
+    Parameters:
+    x_range (tuple): A tuple specifying the range (min, max) for the x values.
+    n (int, optional): The number of data points to generate. Default is 100.
+    f (function, optional): A function that takes an array of x values and returns an array of y values. 
+                            Default is a function that computes x ** 1.5 and adds Gaussian noise.
+
+    Returns:
+    pandas.DataFrame: A DataFrame with columns 'x' and 'y', sorted by 'x'.
+    """
     x = np.random.randint(x_range[0], x_range[1], n)
     y = f(x)
     data = pd.DataFrame({'x': x, 'y': y})
